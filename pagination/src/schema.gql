@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Posts {
+  hasNextPage: Boolean!
+  pages: Int!
+  posts: [Post!]!
+}
+
+type Post {
+  id: Int!
+  title: String!
+  body: String!
+  userId: Int!
+}
+
+type Query {
+  posts(cursor: Int!, limit: Int!): Posts!
+  post(id: Int!): Post!
+}
